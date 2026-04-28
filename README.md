@@ -18,7 +18,7 @@ plaintext
 
 ## 快速开始
 ```python
-from feishu import FeishuBot
+from Feishu_helper import FeishuBot
 
 bot = FeishuBot(
     app_id="你的APP_ID",
