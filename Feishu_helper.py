@@ -287,7 +287,7 @@ class FeishuChatBot:
         # 发送 POST 请求
         response = requests.post(url, headers=headers, params=params, json=data)
         return response.status_code
-    def replay_to_person(self,thread_id,open_id):
+    def reply_to_person(self,thread_id,open_id):
         # 定义 URL 和 Headers
         url = f"https://open.larksuite.com/open-apis/im/v1/threads/{thread_id}/forward"
         headers = {
