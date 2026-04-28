@@ -1,0 +1,10 @@
+requests
+urllib3
+python-dotenv
+filelock
+soundfile
+librosa
+numpy
+matplotlib
+pymysql
+pathlib
