@@ -269,7 +269,7 @@ class FeishuChatBot:
         except requests.exceptions.RequestException as e:
             print(f"Error occurred while replying to the message: {e}")
     #转发话题
-    def replay_to_chat(self,thread_id,chat_id):
+    def reply_to_chat(self,thread_id,chat_id):
         # 定义 URL 和 Headers
         url = f"https://open.larksuite.com/open-apis/im/v1/threads/{thread_id}/forward"
         headers = {
