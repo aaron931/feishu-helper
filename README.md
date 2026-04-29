@@ -75,3 +75,65 @@ bot = FeishuBot(
 - Feishu_helper.py 主工具类
 - requirements.txt 依赖清单
 - README.md 使用说明文档
+from Feishu_helper import FeishuBot
+
+# 初始化飞书机器人
+bot = FeishuBot(
+    app_id="你的APP_ID",
+    app_secret="你的APP_SECRET"
+)
+
+# 1. 发送消息到指定群聊
+bot.send_message_to_chat('chat_id', '你好', at_open_id)
+
+# 2. 发送消息给个人
+bot.send_message_to_person('你好', open_id)
+
+# 3. 以话题形式回复消息
+bot.reply_to_message(message_id, message_content, at_user_open_id)
+
+# 4. 转发话题到群聊
+bot.reply_to_chat('话题的thread_id', '需要转发的群id')
+
+# 5. 转发话题到个人
+bot.reply_to_person('话题的thread_id', '需要转发的open_id')
+
+# 6. 获取部门信息
+bot.get_department_info('department_id')
+
+# 7. 获取子部门列表
+bot.get_department_list('department_id')
+
+# 8. 获取部门成员列表
+bot.get_users_by_department('department_id')
+
+# 9. 获取飞书任务清单（需先将机器人App加入任务清单）
+bot.search_feishu_task('task_list_id')
+
+# 10. 获取任务详情
+bot.get_task_detail('task_guid')
+
+# 11. 下载图片
+bot.get_image('event')
+
+# 12. 上传图片
+bot.upload_image('image_path')
+
+# 13. 上传文件
+bot.upload_file_with_curl_style(file_path, file_type, file_name)
+
+# 14. 下载飞书文件
+bot.download_lark_file('message_id', 'file_token', 'save_path')
+
+# 15. 发送消息到群组（支持@多人）
+bot.send_message_to_chat_at_users(
+    'chat_id',
+    'message_content',
+    at_open_ids
+)
+
+# 16. 创建空白飞书电子表格
+bot.create_feishu_sheet("title", 'creator_open_id')
+
+# 17. 编辑已发送的飞书消息
+bot.update_feishu_message('message_id', 'content_text', 'at_open_id')
